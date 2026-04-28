@@ -15,6 +15,8 @@ func New(input string) *Lexer {
 	return l
 }
 
+// readChar loads the next character into l.ch and moves both pointers forward by 1.
+// if we have reached the end of input, it sets l.ch = 0 (means "nothing left to read")
 func (l *Lexer) readChar() {
 	if l.readPosition >= len(l.input) {
 		l.ch = 0
@@ -27,6 +29,8 @@ func (l *Lexer) readChar() {
 	l.readPosition += 1
 }
 
+// NextToken looks at the current character (l.ch), creates the matching token,
+// moves forward by 1 character, and returns the token
 func (l *Lexer) NextToken() token.Token {
 	var tok token.Token
 
@@ -55,6 +59,7 @@ func (l *Lexer) NextToken() token.Token {
 	return tok
 }
 
+// newToken is a helper that builds and returns a Token from a type and a character
 func newToken(tokenType token.TokenType, ch byte) token.Token {
 	return token.Token{Type: tokenType, Literal: string(ch)}
 }
