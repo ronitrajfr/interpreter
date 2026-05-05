@@ -60,6 +60,7 @@ func (p *Parser) parseStatement() ast.Statement {
 	}
 }
 
+// PARSE LET STATEMENT
 func (p *Parser) parseLetStatement() *ast.LetStatement {
 	stmt := &ast.LetStatement{Token: p.curToken}
 
@@ -71,6 +72,18 @@ func (p *Parser) parseLetStatement() *ast.LetStatement {
 	if !p.expectPeek(token.ASSIGN) {
 		return nil
 	}
+
+	for !p.curTokenIs(token.SEMICOLON) {
+		p.nextToken()
+	}
+	return stmt
+}
+
+// PARSE RETURN STATEMENT
+func (p *Parser) parseReturnStatement() *ast.ReturnStatement {
+	stmt := &ast.ReturnStatement{Token: p.curToken}
+
+	p.nextToken()
 
 	for !p.curTokenIs(token.SEMICOLON) {
 		p.nextToken()
