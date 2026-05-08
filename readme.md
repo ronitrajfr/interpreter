@@ -4,29 +4,20 @@ A Go implementation of the Monkey programming language interpreter, based on the
 
 ## Overview
 
-Monkey is a simple programming language with the following features:
-- Integers, booleans, strings
-- Arithmetic expressions
-- Bindings (let statements)
-- Functions
-- Built-in functions
-- Higher-order functions and closures
-- Arrays, hashes, index expressions
-- Prefix and infix operators
-- Conditionals
-- Return statements
-- First-class functions
+A step-by-step implementation of the Monkey programming language interpreter. This project builds from tokens → AST → evaluated expressions.
 
 ## Project Structure
 
 ```
 .
 ├── main.go          # Entry point
-├── lexer/            # Lexical analyzer
-├── parser/           # Recursive descent parser
-├── token/            # Token definitions
-├── ast/              # Abstract Syntax Tree nodes
-└── repl/             # Read-Eval-Print Loop
+├── lexer/           # Lexical analyzer (Chapter 1)
+├── parser/          # Recursive descent parser (Chapter 2)
+├── token/           # Token definitions
+├── ast/             # Abstract Syntax Tree nodes
+├── evaluator/       # Expression evaluation (Chapter 3)
+├── object/          # Object system for evaluator (Chapter 3)
+└── repl/            # Read-Eval-Print Loop
 ```
 
 ## Build & Run
@@ -35,14 +26,59 @@ Monkey is a simple programming language with the following features:
 go run main.go
 ```
 
+## Progress Tracker
+
+### Chapter 1: Lexing
+
+- [x] Token definitions
+- [x] Lexer - identifiers & keywords
+- [x] Lexer - integers
+- [x] Lexer - operators (=, !=, +, -, etc.)
+
+### Chapter 2: Parsing
+
+- [x] AST node definitions
+- [x] Parser - let statements
+- [x] Parser - return statements
+- [x] Parser - identifiers
+- [x] Parser - integer literals
+- [x] Parser - prefix operators (unary -, !)
+- [ ] Parser - infix operators (+, -, \*, /, <, >, ==, !=)
+- [ ] Parser - operator precedence
+- [ ] Parser - conditionals (if/else)
+- [ ] Parser - function literals
+- [ ] Parser - function calls
+- [ ] Parser - array literals
+- [ ] Parser - hash literals
+- [ ] Parser - index expressions
+
+### Chapter 3: Evaluation
+
+- [ ] Evaluator - integer & boolean expressions
+- [ ] Evaluator - string expressions
+- [ ] Evaluator - prefix operators
+- [ ] Evaluator - infix operators
+- [ ] Evaluator - conditionals
+- [ ] Evaluator - return statements
+- [ ] Evaluator - bindings/environment
+- [ ] Evaluator - function literals
+- [ ] Evaluator - function calls
+- [ ] Evaluator - closures
+
+### Chapter 4: Extending the Interpreter
+
+- [ ] Strings
+- [ ] Arrays
+- [ ] Hashes
+- [ ] Built-in functions (len, puts, first, last, rest, push)
+- [ ] Higher-order functions
+
 ## Usage
 
 Start the REPL and type Monkey code:
 
 ```
 >> let x = 5;
->>
->> let add = fn(x, y) { x + y };
->>
->> add(10, 20);
+>> return 10;
+>> !true
 ```
