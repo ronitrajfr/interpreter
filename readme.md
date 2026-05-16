@@ -44,13 +44,8 @@ go run main.go
 - [x] Parser - integer literals
 - [x] Parser - prefix operators (unary -, !)
 - [x] Parser - infix operators (+, -, \*, /, <, >, ==, !=)
-- [ ] Parser - operator precedence
-- [ ] Parser - conditionals (if/else)
-- [ ] Parser - function literals
-- [ ] Parser - function calls
-- [ ] Parser - array literals
-- [ ] Parser - hash literals
-- [ ] Parser - index expressions
+- [x] Parser - boolean literals
+- [x] Parser - grouped expressions
 
 ### Chapter 3: Evaluation
 
