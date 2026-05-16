@@ -43,7 +43,7 @@ go run main.go
 - [x] Parser - identifiers
 - [x] Parser - integer literals
 - [x] Parser - prefix operators (unary -, !)
-- [ ] Parser - infix operators (+, -, \*, /, <, >, ==, !=)
+- [x] Parser - infix operators (+, -, \*, /, <, >, ==, !=)
 - [ ] Parser - operator precedence
 - [ ] Parser - conditionals (if/else)
 - [ ] Parser - function literals
