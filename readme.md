@@ -46,6 +46,8 @@ go run main.go
 - [x] Parser - infix operators (+, -, \*, /, <, >, ==, !=)
 - [x] Parser - boolean literals
 - [x] Parser - grouped expressions
+- [x] Parser - conditional literals
+- [x] Parser - function expression
 
 ### Chapter 3: Evaluation
 
