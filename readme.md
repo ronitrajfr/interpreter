@@ -26,50 +26,6 @@ A step-by-step implementation of the Monkey programming language interpreter. Th
 go run main.go
 ```
 
-## Progress Tracker
-
-### Chapter 1: Lexing
-
-- [x] Token definitions
-- [x] Lexer - identifiers & keywords
-- [x] Lexer - integers
-- [x] Lexer - operators (=, !=, +, -, etc.)
-
-### Chapter 2: Parsing
-
-- [x] AST node definitions
-- [x] Parser - let statements
-- [x] Parser - return statements
-- [x] Parser - identifiers
-- [x] Parser - integer literals
-- [x] Parser - prefix operators (unary -, !)
-- [x] Parser - infix operators (+, -, \*, /, <, >, ==, !=)
-- [x] Parser - boolean literals
-- [x] Parser - grouped expressions
-- [x] Parser - conditional literals
-- [x] Parser - function expression
-
-### Chapter 3: Evaluation
-
-- [ ] Evaluator - integer & boolean expressions
-- [ ] Evaluator - string expressions
-- [ ] Evaluator - prefix operators
-- [ ] Evaluator - infix operators
-- [ ] Evaluator - conditionals
-- [ ] Evaluator - return statements
-- [ ] Evaluator - bindings/environment
-- [ ] Evaluator - function literals
-- [ ] Evaluator - function calls
-- [ ] Evaluator - closures
-
-### Chapter 4: Extending the Interpreter
-
-- [ ] Strings
-- [ ] Arrays
-- [ ] Hashes
-- [ ] Built-in functions (len, puts, first, last, rest, push)
-- [ ] Higher-order functions
-
 ## Usage
 
 Start the REPL and type Monkey code:
