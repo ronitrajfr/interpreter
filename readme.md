@@ -4,7 +4,7 @@ A Go implementation of the Monkey programming language interpreter, based on the
 
 ## Overview
 
-A step-by-step implementation of the Monkey programming language interpreter. This project builds from tokens → AST → evaluated expressions.
+A step-by-step implementation of the Monkey programming language interpreter. This project builds from tokens → AST → evaluated expressions
 
 ## Project Structure
 
